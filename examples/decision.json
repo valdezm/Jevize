@@ -1,0 +1,1 @@
+{"goal":"Resolve the failing CI run","state":{"page":"github-pr","ci":"failed","changedFiles":17},"choices":[{"id":"inspect_logs","description":"Inspect failed CI logs"},{"id":"rerun","description":"Rerun failed jobs"},{"id":"inspect_diff","description":"Inspect code changes"},{"id":"ask_human","description":"Escalate to developer"}]}

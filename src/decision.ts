@@ -1,0 +1,2 @@
+import {randomUUID} from 'node:crypto';import {askTeacher} from './teacher.js';import {recordExperience} from './store.js';import type {DecisionRequest,DecisionResult} from './types.js';
+export async function decide(input:DecisionRequest):Promise<DecisionResult>{const teacher=await askTeacher(input);const result:DecisionResult={id:randomUUID(),...teacher,confidence:teacher.probabilities[teacher.decision]??0,source:'teacher'};recordExperience(input,result);return result;}
